@@ -28,7 +28,6 @@ app.use("/api/user", userRoute);
 app.use("/api/forum", forumRoute);
 app.use(errorMiddleware);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 80, () => {
   connect();
-  console.log("running on 8000");
 });
